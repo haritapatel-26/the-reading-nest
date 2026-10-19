@@ -1,0 +1,49 @@
+/* GENERAL */
+body { background-color: #f5f7fb; font-family: Arial, sans-serif; }
+.navbar { min-height: 70px; }
+.navbar-brand { letter-spacing: .3px; white-space: nowrap; }
+.navbar-actions { display:flex; align-items:center; gap:10px; margin-left:auto; }
+.search-container { width:300px; }
+.search-container input { border-radius:8px; }
+.navbar .btn { border-radius:8px; white-space:nowrap; }
+.add-book-icon,.mobile-icon-button { display:none; }
+
+/* BOOK CARDS */
+.book-card { height:100%; border:none; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.08); background:#fff; cursor:pointer; transition:transform .2s ease,box-shadow .2s ease; }
+.book-card:hover { transform:translateY(-4px); box-shadow:0 5px 16px rgba(0,0,0,.12); }
+.book-cover { width:100%; height:280px; object-fit:contain; background:#eee; }
+.book-card .card-body { padding:18px; }
+.book-title { font-size:18px; font-weight:bold; overflow-wrap:anywhere; }
+.book-author,.details-author { color:#666; }
+.photo-preview { width:100%; max-height:300px; object-fit:contain; border-radius:8px; background:#eee; }
+.details-cover { width:100%; max-height:400px; object-fit:contain; background:#eee; border-radius:8px; }
+.details-title { font-size:24px; font-weight:bold; margin-top:20px; }
+.details-author { font-size:17px; }
+.empty-library { text-align:center; padding:60px 20px; color:#777; }
+.empty-library h3 { margin-bottom:10px; }
+.auth-panel { min-height:65vh; display:flex; align-items:center; }
+.auth-card { max-width:480px; width:100%; background:white; padding:28px; border-radius:16px; box-shadow:0 3px 18px rgba(0,0,0,.08); }
+.admin-panel { border:1px solid #ead5e7; border-radius:12px; }
+.member-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; padding:12px 0; border-top:1px solid #eee; }
+.member-row:first-child { border-top:0; }
+.book-meta { font-size:.93rem; }
+.loan-row { border:1px solid #eee; border-radius:8px; padding:10px; margin-bottom:8px; }
+.status-pill { display:inline-block; padding:4px 9px; border-radius:20px; background:#f1e5f1; color:#7b246a; font-size:.82rem; }
+.toast { box-shadow:0 4px 18px rgba(0,0,0,.15); }
+@media (max-width:767px) {
+  .navbar { padding-top:10px; padding-bottom:10px; }
+  .navbar-brand { font-size:1.4rem!important; }
+  .search-container { width:180px; }
+}
+@media (max-width:576px) {
+  .navbar-brand { font-size:1.05rem!important; }
+  .search-container { display:none; }
+  .mobile-icon-button { display:block; }
+  .add-book-full { display:none; }
+  .add-book-icon { display:inline; }
+  .book-cover { height:240px; }
+  .navbar-actions { gap:6px; }
+  .navbar-actions .btn { padding:7px 10px; }
+  .search-container.mobile-search-open { display:block; position:absolute; top:70px; left:10px; right:10px; width:auto; z-index:1000; }
+  .search-container.mobile-search-open input { width:100%; box-shadow:0 3px 8px rgba(0,0,0,.15); }
+}
